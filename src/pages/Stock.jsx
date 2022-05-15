@@ -7,6 +7,7 @@ export default function Stock({apikey}){
     const { symbol } = useParams()
     
 
+
     const url = `https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=${apikey}`
 
 

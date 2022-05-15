@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react'
 
 
-
-
 export default function Dashboard({apikey}) {
 
 // use popular active api to get list of stock and get list of information
 // use a usestate? then use a use effect to get the data to display constantly?
 //
+
     const url = `https://financialmodelingprep.com/api/v3/stock_market/actives?apikey=${apikey}`
     const [active,setActive] = useState(null)
 
@@ -18,7 +17,7 @@ export default function Dashboard({apikey}) {
     }
 
     useEffect(()=>{getActive()},[])
-
+    console.log("this is active", active)
     function loaded(){
         return (
             <div className="dashboard">
